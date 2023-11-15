@@ -704,3 +704,6 @@ By Trinity Software Academy.''')
     else:
         print("Invalid Choice. Try Again..")
         start()
+
+# start
+start()
