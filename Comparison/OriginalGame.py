@@ -26,7 +26,7 @@ while chances > 0:
        print()
     else:
        wrong_guess += 1
-       print('', end =' ')
+       print('', end ='_')
    if wrong_guess == 0:
        print('\nCongrats.you won. The word is ',random_word)
        again = input('Do you like to play again? Y or N')
