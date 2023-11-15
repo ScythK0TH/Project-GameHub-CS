@@ -25,7 +25,7 @@ while chances > 0:
     if ch in user_guesses:
        print()
     else:
-       wrongguess += 1
+       wrong_guess += 1
        print('', end =' ')
    if wrong_guess == 0:
        print('\nCongrats.you won. The word is ',random_word)
