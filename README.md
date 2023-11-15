@@ -63,8 +63,8 @@ This project is for education purpose
 
 ## Authors/Contract Info
 
-[IG: oscar_legend.m](https://www.instagram.com/oscar_legend.m)
-[IG: tinnapoptongnoon](https://www.instagram.com/tinnapoptongnoon)
+- [IG: oscar_legend.m](https://www.instagram.com/oscar_legend.m)
+- [IG: tinnapoptongnoon](https://www.instagram.com/tinnapoptongnoon)
 
 ## Acknowledgments
 
