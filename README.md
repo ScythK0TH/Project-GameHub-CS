@@ -43,7 +43,22 @@ This is prototype version of CS Game Hub Project made by me.
 | Menu Selection            |
 | More Modes                |
 | Pop-up Window             |
-| More Options              |
+| More Options (Main Menu)  |
+| Jump-Scare                |
+| Sound Effect              |
+| Save-Data                 |
+| Load-Data                 |
+| Game Over                 |
+| Scores                    |
+| Special-Items             |
+| Play Again/Restart        |
+| Bonus Level               |
+| Hidden Level              |
+| Boss Health               |
+| Attack/Item Menu          |
+| Hidden Easter Egg         |
+| Anti-Cheats               |
+| And More...               |
 
 ## Authors/Contract Info
 
@@ -52,4 +67,6 @@ This is prototype version of CS Game Hub Project made by me.
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* Up Coming...
+* [Python Word Guessing Game for Beginners By Trinity Software Academy](https://www.youtube.com/watch?v=oPppxUduFFE)
+* [Stack Over Flow Community](https://stackoverflow.com)
+* [MVP Napa-Saebae]
