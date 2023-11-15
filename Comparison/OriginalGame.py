@@ -1,3 +1,5 @@
+#This is original word guessing game by Trinity Software Academy
+
 import random
 
 animals = [ 'elephant' , 'bear' , 'cheetah' , 'giraffe' , 'wolf' , 'tiger' , 'penguin' , 'rabbit' , 'lion' , 'monkey' , 'rhinoceros' , 'sheep' , 'kangaroo' , 'zebra']
