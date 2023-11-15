@@ -1,11 +1,11 @@
 # Project GameHub CS
 Game Hub By CS SWU
-Main Game is Word Guessing ADV Version
 This project is for education purpose
 
 ## Description
 
-This is prototype version of CS Game Hub Project made by me.
+- This is prototype version of CS Game Hub Project made by me.
+- Main Game is Word Guessing ADV Version
 
 ## Getting Started
 
