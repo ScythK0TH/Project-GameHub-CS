@@ -39,7 +39,7 @@ while chances > 0:
    user_guesses += guess
 
    if guess not in random_word:
-       chancse -= 1
+       chances -= 1
        print(f'Worng. You have {chances} more chances')
        if chances == 0:
          print('Game over. You Lose. The word is ', random_word)
