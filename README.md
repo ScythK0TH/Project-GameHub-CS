@@ -1,6 +1,7 @@
 # Project GameHub CS
 Game Hub By CS SWU
-This project is for education purpose.
+Main Game is Word Guessing ADV Version
+This project is for education purpose
 
 ## Description
 
@@ -24,7 +25,7 @@ This is prototype version of CS Game Hub Project made by me.
 6. Double Click or Run `gamehub.py`
 7. Enjoy!!
 
-## Comparision Before / After
+## Comparision Before / After [Word Guessing Game]
 
 ### Before
 | Tables              |
