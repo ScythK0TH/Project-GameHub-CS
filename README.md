@@ -22,7 +22,22 @@ This is prototype version of CS Game Hub Project made by me.
 4. Open your `cmd` and `cd` the folder you extracted
 5. Run `pip install -r requirements.txt`
 6. Double Click or Run `gamehub.py`
-7. Enjoy!! 
+7. Enjoy!!
+
+### Comparision Before / After
+
+| Tables              | After               |
+|:-------------------:|:-------------------:|
+|[x] Word Guessing    |[x] Word Guessing    |
+|[x] Answer Reveal    |[x] Answer Reveal    |
+|[x] Hint (Category)  |[x] Hint (Category)  |
+|[ ] Hint (Each Word) |[x] Hint (Each Word) |
+|[ ] Menu Selection   |[x] Menu Selection   |
+|[ ] More Modes       |[x] More Modes       |
+|[ ] Pop-up Window    |[x] Pop-up Window    |
+|[ ] More Options     |[x] More Options     |
+|[ ] |[x] |
+|[ ] |[x] |
 
 ## Authors/Contract Info
 
