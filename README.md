@@ -11,8 +11,8 @@ This is prototype version of CS Game Hub Project made by me.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+* Any OS with Python 3.X+
+* *Optional* Pycharm, Python IDLE, Google Colab, etc
 
 ### Installing
 
