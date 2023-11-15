@@ -28,7 +28,7 @@ This is prototype version of CS Game Hub Project made by me.
 ## Comparision Before / After [Word Guessing Game]
 
 ### Before
-| Tables              |
+| Before              |
 |:-------------------:|
 | Word Guessing       |
 | Answer Reveal       |
