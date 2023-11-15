@@ -1,6 +1,6 @@
 # Project GameHub CS
-Game Hub By CS SWU
-This project is for education purpose
+- Game Hub By CS SWU
+- This project is for education purpose
 
 ## Description
 
