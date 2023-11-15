@@ -12,7 +12,7 @@ This is prototype version of CS Game Hub Project made by me.
 ### Dependencies
 
 * Any OS with Python 3.X+
-* *Optional* Pycharm, Python IDLE, Google Colab, etc
+* *Optional* Pycharm, Python IDLE, Google Colab, etc.
 
 ### Installing
 
