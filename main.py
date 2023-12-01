@@ -18,18 +18,25 @@ warning_url = 'https://raw.githubusercontent.com/ScythK0TH/gamehub-cs-swu/main/w
 warning_text = requests.get(warning_url)
 warning = warning_text.text
 
-animals_e = ['elephant', 'bear',  'wolf', 'tiger', 'penguin', 'rabbit', 'lion', 'monkey','sheep', 'zebra']
+animals_e = ['elephant', 'bear', 'wolf', 'tiger', 'penguin', 'rabbit', 'lion', 'monkey', 'sheep', 'zebra']
 
 fruits_e = ['apple', 'banana', 'grapes', 'mango', 'lime', 'guava', 'orange', 'papaya', 'pear', 'peach', 'strawberry']
 
-elements = ['lithium' , 'hydrogen' ,'kryptonite','sodium', 'platinum' , 'silver' ,'neon' , 'carbon' ,'oxygen' , 'gold']
+elements = ['lithium', 'hydrogen', 'kryptonite', 'sodium', 'platinum', 'silver', 'neon', 'carbon', 'oxygen', 'gold']
+
+Country = ['Japan', 'Thailand', 'English', 'France', 'Korean', 'China', 'Switzerland', 'Spain', 'Netherlands',
+           'Philippines']
+
+Country_HC = ['India', 'Singapore', 'Finland', 'Poland', 'Greece', 'Canada', 'Brazil', 'Argentina', 'Mexico', 'Egypt']
 
 score = 0
+
 
 def start():
     item = []
     bonus = False
     cur_diff = ''
+
     def save_data():
         global score
         nonlocal item
@@ -44,6 +51,7 @@ def start():
         print(f"Your saved code is here (Copy It): {en_saved}")
         end = input(
             "Press Enter to continue...")
+
     def load_data():
         global score
         nonlocal item
@@ -113,6 +121,7 @@ By Trinity Software Academy.''')
     def wordgussing():
         nonlocal bonus
         nonlocal cur_diff
+
         def surprise():
             regan_image = io.BytesIO(base64.b64decode(regan))
             surprise_audio = io.BytesIO(base64.b64decode(surprise_a))
@@ -141,7 +150,9 @@ By Trinity Software Academy.''')
                         print('\nGame over. You Lose. The word is', random_word)
                         print('\n********************************\n')
                         item = []
+                        score = 0
                         bonus = False
+
                         def reagain():
                             global score
                             restart1 = input('Restart? (Y/N): ')
@@ -164,6 +175,7 @@ By Trinity Software Academy.''')
                                 print('\n')
                                 print("Invalid Choice. Try Again..")
                                 reagain()
+
                         reagain()
                         sys.exit()
                     elif event.type == pygame.KEYDOWN:
@@ -173,6 +185,7 @@ By Trinity Software Academy.''')
                             print('\nGame over. You Lose. The word is', random_word)
                             print('\n********************************\n')
                             item = []
+                            score = 0
                             bonus = False
 
                             def reagain():
@@ -187,7 +200,8 @@ By Trinity Software Academy.''')
                                     print("******************************************")
                                     print(f"Your Highest Score is {score}")
                                     print("******************************************")
-                                    print("/// Recommended to save this score as a picture!! (It will gone if you exit this program.) ///")
+                                    print(
+                                        "/// Recommended to save this score as a picture!! (It will gone if you exit this program.) ///")
                                     end = input(
                                         "\nPress Enter to continue...")
                                     score = 0
@@ -196,9 +210,11 @@ By Trinity Software Academy.''')
                                     print('\n')
                                     print("Invalid Choice. Try Again..")
                                     reagain()
+
                             reagain()
                             sys.exit()
                 draw()
+
         if bonus == True:
             if cur_diff == 'easy' or cur_diff == 'normal':
                 words = animals_e + fruits_e
@@ -208,7 +224,7 @@ By Trinity Software Academy.''')
                 sp = 2.25
                 each_c = 300
             elif cur_diff == 'hard':
-                words = elements
+                words = elements + Country
                 chances = 3
                 blc = 150
                 bosslife = 150
@@ -229,7 +245,7 @@ By Trinity Software Academy.''')
             diff = diff1.lower()
             if score > 7000:
                 if diff == 'hardcore':
-                    words = elements
+                    words = elements + Country + Country_HC
                     chances = 2
                     blc = 100
                     bosslife = 100
@@ -253,7 +269,7 @@ By Trinity Software Academy.''')
                     each_c = 300
                     cur_diff = diff
                 elif diff == 'hard':
-                    words = elements
+                    words = elements + Country
                     chances = 3
                     blc = 50
                     bosslife = 50
@@ -282,7 +298,7 @@ By Trinity Software Academy.''')
                     each_c = 300
                     cur_diff = diff
                 elif diff == 'hard':
-                    words = elements
+                    words = elements + Country
                     chances = 3
                     blc = 50
                     bosslife = 50
@@ -294,7 +310,6 @@ By Trinity Software Academy.''')
                     print("Invalid Choice. Try Again..")
                     wordgussing()
 
-
             # --------------------------------------------------------------
         while True:
             print("******************************************")
@@ -302,71 +317,116 @@ By Trinity Software Academy.''')
             random_word = random.choice(words)
             if random_word in animals_e:
                 print('\nHint: It is an animal')
-                if random_word == 'elephant':        #คำใบ้
-                    print ('It have big ear.!!!')
+                if random_word == 'elephant':  # คำใบ้
+                    print('It have big ear.!!!')
                 elif random_word == 'bear':
-                    print ('My hands not ''gum'' but ...')
+                    print('My hands not *gum* but ...')
                 elif random_word == 'wolf':
-                    print ('Appears in the story of the 3 little pigs.  ')
+                    print('Appears in the story of the 3 little pigs.  ')
                 elif random_word == 'tiger':
-                    print ('It look like zebra but orange.')
+                    print('It look like zebra but orange.')
                 elif random_word == 'penguin':
-                    print ('It have black and white and it cant fly.  ')
+                    print('It have black and white and it cant fly.  ')
                 elif random_word == 'rabbit':
-                    print ('It was once defeated by a turtle. ')
+                    print('It was once defeated by a turtle. ')
                 elif random_word == 'zebra':
-                    print ('It look like horse. ')
+                    print('It look like horse. ')
                 elif random_word == 'monkey':
-                    print ('Look like a human.')
-
-
+                    print('Look like a human.')
 
             elif random_word in fruits_e:
-                print('\nHint: It is an fruits')
-                if random_word == 'apple':        #คำใบ้
-                    print ('Snow White falls asleep when she eats it. ')
+                print('\nHint: It is a fruits')
+                if random_word == 'apple':  # คำใบ้
+                    print('Snow White falls asleep when she eats it. ')
                 elif random_word == 'banana':
-                    print ('monkey like to eat.  ')
+                    print('monkey like to eat.  ')
                 elif random_word == 'grapes':
-                    print ('There are many and purple.  ')
+                    print('There are many and purple.  ')
                 elif random_word == 'mango':
-                    print ('They are green in color and when cooked they are yellow. ')
+                    print('They are green in color and when cooked they are yellow. ')
                 elif random_word == 'lime':
-                    print ('It look like lemon  ')
+                    print('It look like lemon  ')
                 elif random_word == 'guava':
-                    print ('It ')
+                    print('Names that Thai people call foreigners ')
                 elif random_word == 'orange':
-                    print ('Names that Thai people call foreigners  ')
+                    print('This word refers to a vibrant color in the spectrum that lies between red and yellow." ')
                 elif random_word == 'papaya':
-                    print ('Thai people like to use it in cooking with salad.')
+                    print('Thai people like to use it in cooking with salad.')
                 elif random_word == 'pear':
-                    print ('Thai stars  ')
+                    print('It a sweet fruit, often green, with a shape thinner at the top and round at the bottom.  ')
                 elif random_word == 'peach':
-                    print ('It have white to yellow or orange ')
+                    print('It have white to yellow and orange or His name is Chirathivat ')
                 elif random_word == 'strawberry':
-                    print ('It is Migaki-Ichigo ')
+                    print('It is Migaki-Ichigo ')
+
             elif random_word in elements:
                 print('\nHint: It is an elements')
-                if random_word == 'lithium':        #คำใบ้
-                    print ('It have 3 atom')
+                if random_word == 'lithium':  # คำใบ้
+                    print('It have 3 atom')
                 elif random_word == 'hydrogen':
-                    print ('It First in table elements ')
+                    print('It First in table elements ')
                 elif random_word == 'kryptonite':
-                    print ('It was something Superman had defeats before.   ')
+                    print('It was something Superman had defeats before.   ')
                 elif random_word == 'sodium':
-                    print ('You can find them in the ocean. but no chloride  ')
+                    print('You can find them in the ocean. but no chloride  ')
                 elif random_word == 'platinum':
-                    print ('It  white gold')
+                    print('It white gold')
                 elif random_word == 'silver':
-                    print ('It  ')
+                    print('It money but not money  ')
                 elif random_word == 'neon':
-                    print ('It bright on night when you go to Tokyo ')
+                    print('It bright on night when you go to Tokyo ')
                 elif random_word == 'carbon':
-                    print ('It money but not money  ')
+                    print('It components of pencil lead  ')
                 elif random_word == 'oxygen':
-                    print ('You always use all the time.')
+                    print('You always use all the time.')
                 elif random_word == 'gold':
-                    print ('It very expensive  ')
+                    print('It very expensive and you can find shop in department store  ')
+
+            elif random_word in Country:
+                print('\nHint: It is a Country')
+                if random_word == 'Japan':  # คำใบ้
+                    print('It have red and white circle')
+                elif random_word == 'Thailand':
+                    print('creator made')
+                elif random_word == 'English':
+                    print('You are reading it')
+                elif random_word == 'France':
+                    print('Eiffel Tower from ...')
+                elif random_word == 'Korean':
+                    print('It has red and blue yin yang.')
+                elif random_word == 'China':
+                    print('It has one big stra and little four stars.')
+                elif random_word == 'Switzerland':
+                    print('It has white plus.')
+                elif random_word == 'Spain':
+                    print('Gracias!!! mean Thank you.')
+                elif random_word == 'Netherlands':
+                    print('Country code NL.')
+                elif random_word == 'Philippines':
+                    print('Maynila form ... ')
+
+            elif random_word in Country_HC:
+                print('\nHint: It is a Country')
+                if random_word == 'India':  # คำใบ้
+                    print('pink + continent ')
+                elif random_word == 'Singapore':
+                    print('The head is a lion and the body is a fish. ')
+                elif random_word == 'Finland':
+                    print('You can see the northern lights in Lapland. ')
+                elif random_word == 'Poland':
+                    print('St. Marys Church One of the three largest brick churches in the world ')
+                elif random_word == 'Greece':
+                    print('This mountain range is the birthplace of the Olympic Games. ')
+                elif random_word == 'Indonesia':
+                    print('Origin of food spices ')
+                elif random_word == 'Brazil':
+                    print('The motto that appears on the national flag is “Ordem e Progresso.” ')
+                elif random_word == 'Argentina':
+                    print('Iguazu Falls, one of the Seven Natural Wonders of the World ')
+                elif random_word == 'Mexico':
+                    print('Origin of Burritos ')
+                elif random_word == 'Egypt':
+                    print('The capital is nicknamed "A City of a Thousand Minarets." ')
 
             # --------------------------------------------------------------
 
@@ -398,6 +458,7 @@ By Trinity Software Academy.''')
                             bonus = False
                             noreward = 'NOPE'
                             randomitem = ['dxt', 'dxt', 'rvl', 'rvl', 'rvl', 'hp', 'hp', 'hp', 'hp', 'hp', 'hp']
+
                             def againf():
                                 global score
                                 nonlocal item
@@ -500,6 +561,7 @@ By Trinity Software Academy.''')
                                     print('\n')
                                     print("Invalid Choice. Try Again..")
                                     againp()
+
                             againp()
                         break
 
@@ -554,6 +616,7 @@ By Trinity Software Academy.''')
                                                         print('\n')
                                                         print("Invalid Choice. Try Again..")
                                                         againb()
+
                                                 againb()
                                                 wordgussing()
                                             else:
@@ -606,6 +669,7 @@ By Trinity Software Academy.''')
                             print('\n')
                             print("Invalid Choice. Try Again..")
                             pass
+
                     options()
 
     def warn():
@@ -681,8 +745,10 @@ By Trinity Software Academy.''')
                         cheat = ''
 
             draw()
+
     def enter():
         warn()
+
     print("\n******************************************")
     print("Welcome To Word Guessing Adventure!!!")
     print("******************************************\n")
@@ -704,6 +770,7 @@ By Trinity Software Academy.''')
     else:
         print("Invalid Choice. Try Again..")
         start()
+
 
 # start
 start()
